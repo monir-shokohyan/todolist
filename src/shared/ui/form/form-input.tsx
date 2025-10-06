@@ -1,8 +1,8 @@
 import { useId } from 'react'
 import { Control, Controller, FieldValues, Path } from 'react-hook-form'
 import { Form, Input, InputProps } from 'antd'
+import { Text } from '@shared/typography'
 
-import { StyledTextHover } from '@shared/styles/StyledTextHover'
 
 interface Props<Form extends FieldValues> extends Omit<InputProps, 'name'> {
   name: keyof Form
@@ -41,7 +41,7 @@ export const FormInput = <Form extends FieldValues>({
             {...attrs}
           />
           {error?.message && (
-            <StyledTextHover type="danger">{error.message}</StyledTextHover>
+            <Text type="danger">{error.message}</Text>
           )}
         </Form.Item>
       )}
