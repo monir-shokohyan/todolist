@@ -10,7 +10,7 @@ function Ui() {
   if (state.error) return <div className="p-4 text-center text-red-500">Error: {state.error.message}</div>;
 
   return (
-    <div className="p-4 border-2 border-gray-200 bg-gray-100 shadow-md">
+    <div className="p-6 border-2 border-gray-200 rounded-2xl bg-gray-100 shadow-md h-full">
       <h1 className="text-2xl font-bold mb-4">Dynamic Task Board</h1>
       <AddTaskForm onAdd={handleAddTask} />
         <DragDropContext onDragEnd={onDragEnd}>
