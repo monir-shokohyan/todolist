@@ -4,7 +4,7 @@ import { Flex } from 'antd'
 const Ui = () => {
   return (
     <Flex
-      className='h-full w-full bg-gray-100'
+      className='h-full w-full'
     >
       <Dashboard />
     </Flex>

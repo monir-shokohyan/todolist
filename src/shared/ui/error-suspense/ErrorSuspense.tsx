@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 
 import { ErrorFallback } from '../ErrorFallBack'
+import { Loader } from '../loader/Loader'
 
 const ErrorSuspense = ({
   suspenseKey,
@@ -13,7 +14,9 @@ const ErrorSuspense = ({
   return (
     <Suspense
       key={suspenseKey}
-      fallback={<h1>loading ...</h1>}
+      fallback={
+        <Loader />
+      }
     >
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         {children}

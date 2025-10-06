@@ -1,22 +1,13 @@
-// src/components/Column.tsx
 import { Droppable } from 'react-beautiful-dnd';
 import TaskCard from './TaskCard';
+import { ColumnProps } from '../types';
+import { columnTitles } from '../constant';
 
-const columnTitles = {
-  todo: 'To Do',
-  inprogress: 'In Progress',
-  done: 'Done',
-};
 
-interface ColumnProps {
-  id: 'todo' | 'inprogress' | 'done';
-  tasks: any[];
-  onDelete: (taskId: number, columnId: string) => void;
-}
 
 function Column({ id, tasks, onDelete }: ColumnProps) {
   return (
-    <div className="bg-gray-100 p-4 rounded-lg w-80">
+    <div className="bg-gray-100 p-4 rounded-lg w-80 overflow-y-auto">
       <h2 className="text-lg font-semibold mb-2">{columnTitles[id]}</h2>
       <Droppable droppableId={id}>
         {(provided) => (
