@@ -1,0 +1,18 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[headers]]
+  for = "/static/js/*" # Or adjust if your JS files are elsewhere
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/static/css/*" # Also good to explicitly set CSS if needed
+  [headers.values]
+    Content-Type = "text/css"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
