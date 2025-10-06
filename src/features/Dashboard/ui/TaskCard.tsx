@@ -15,7 +15,7 @@ const TaskCard = memo(({ task, index, onDelete }: TaskCardProps) => {
         <div
           ref={provided.innerRef}
           {...provided.draggableProps}
-          className={`p-3 mb-3 rounded-lg shadow-sm border transition-all duration-200
+          className={`p-2 mb-3 rounded-lg shadow-sm border transition-all duration-200
             ${snapshot.isDragging ? 'bg-blue-50 border-blue-300' : 'bg-white border-gray-200'}
             w-full sm:w-[250px] md:w-[280px] hover:bg-gray-50 flex flex-col`}
         >

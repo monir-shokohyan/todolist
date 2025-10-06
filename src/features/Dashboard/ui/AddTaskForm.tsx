@@ -25,10 +25,11 @@ const {handleSubmit, errors, onSubmit, control} = useManageAddTask({onAdd})
             className="flex-grow"
             status={errors.title ? 'error' : undefined}
             onChange={(e) => field.onChange(e.target.value)}
+            size="large"
           />
         )}
       />
-      <Button type="primary" htmlType="submit" className="h-full">
+      <Button type="primary" htmlType="submit" className="h-full" size="large">
         Add Task
       </Button>
     </form>
