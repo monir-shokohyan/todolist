@@ -11,7 +11,6 @@ export const Content = ({ title, children, ...props }: Props) => {
       direction="vertical"
       {...props}
       style={{
-        position: 'relative',
         width: '100%',
         height: '100%',
         ...props.style,

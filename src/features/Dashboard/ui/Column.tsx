@@ -3,11 +3,9 @@ import TaskCard from './TaskCard';
 import { ColumnProps } from '../types';
 import { columnTitles } from '../constant';
 
-
-
 function Column({ id, tasks, onDelete }: ColumnProps) {
   return (
-    <div className="bg-gray-100 p-4 rounded-lg w-80 overflow-y-auto min-h-96">
+    <div className="bg-gray-100 p-4 rounded-lg md:w-[300px] w-[270px] min-h-96 overflow-y-auto ">
       <h2 className="text-lg font-semibold mb-2">{columnTitles[id]}</h2>
       <Droppable droppableId={id}>
         {(provided) => (

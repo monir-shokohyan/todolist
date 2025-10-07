@@ -1,27 +1,4 @@
-// src/reducers/taskReducer.ts
-interface Task {
-  id: number;
-  title: string;
-}
-
-interface Column {
-  [key: string]: Task[];
-  todo: Task[];
-  inprogress: Task[];
-  done: Task[];
-}
-
-interface State {
-  columns: Column;
-  loading: boolean;
-  error: Error | null;
-}
-
-interface Action {
-  type: string;
-  payload?: any;
-}
-
+import { State, Action, Column, Task } from '../types/task-reducer';
 function TaskReducer(state: State, action: Action): State {
   switch (action.type) {
     case 'FETCH_START':

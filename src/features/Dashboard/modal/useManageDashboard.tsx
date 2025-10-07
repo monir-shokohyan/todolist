@@ -37,6 +37,7 @@ const useManageDashboard = () => {
   };
 
   const onDragEnd = (result:any) => {
+    console.log(result)
     dispatch({ type: 'MOVE_TASK', payload: result });
   };
 
